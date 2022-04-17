@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+    <meta charset="UTF-8">
+    <title>My first proper HTML page</title>
+    </head>
+
+
+<body> 
+	<!-- <h1>Hello World!</h1> -->
+	<!-- <p>My <em>first</em> <strong>web page</strong>.</p> -->
+	<!-- <p>Let's add another <strong><em>paragraph</em></strong>.</p> -->
+   <script>
+      var words=["Javascript", "monkey", "amazing", "pancake"];
+      
+      // Pick a random word
+      var word = words[Math.floor(Math.random()* words.length)];
+
+      // Set up the answer array
+      var answerArray = [];
+      for(var i = 0; i < word.length; ++i){
+         answerArray[i] = "_ ";
+      }
+
+      var remainingLetters = word.length;
+
+      // The game loop
+      while (remainingLetters > 0 ){         
+         // Get a guess from player
+         var guess = prompt("Guess a letter, or click Cancer to stop playing.");
+         if( guess === null){
+            //Exit the game loop
+            break;
+         }else if(guess.length !==1){
+            alert("Please enter a single letter.");
+         }else{
+            //Update the game state with the guess
+            for(var j = 0; j < word.length; ++j){
+               if(word[j] === guess && answerArray[j]==="_ "){
+                  answerArray[j] = guess;
+                   remainingLetters--;
+               }
+
+            }
+         }
+
+         // Show the player their progress
+         alert(answerArray.join(""));
+      }
+
+      // Show the answer the congratulate the player
+      // alert(answerArray.join(""));
+      alert("Good job! The answer was "+word);
+
+   </script>
+
+
+</body>
+
+
+</html>
