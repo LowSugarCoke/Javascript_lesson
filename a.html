@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+
+<body>
+
+
+<script>
+var words = ["minecraft","glow squid","axolotl","goat","amethyst"];
+
+var word = words[Math.floor(Math.random() * words.length)];
+
+
+var answerArray = [];
+for(var i=0;i<word.length;i++){
+    answerArray[i] = "_";
+}
+
+var RemainingLetters = word.length;
+    
+    
+    
+    
+    
+    
+while ( RemainingLetters > 0 ){
+    alert(answerArray.join(" "));
+
+    var PlayerGuess = prompt ("Guess a letter in the alphabet");
+    if (PlayerGuess === null){
+        break;
+    }else if (PlayerGuess.length != 1){
+        alert ("You can only guess a single letter")
+    }else{
+        for (a = 0;a<word.length;a++){
+            if (PlayerGuess === word[]){
+                answerArray[a] = PlayerGuess;
+            }
+        }
+    }
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
