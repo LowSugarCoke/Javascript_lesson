@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="main-heading">Hello World</h1>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+        for (var i = 0; i < 3; ++i) {
+            //    var newHeadingText = prompt("Please provide a new heading.");
+            //    $("#main-heading").text(newHeadingText);
+
+            var hobby = prompt("Tell me one of your hobbies!");
+            $("body").append("<p>" + hobby + "<p>")
+        }
+        
+        
+
+    </script>
+</body>
+
+</html>
