@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Hang Man</title>
+</head>
+
+<body>
+
+    <script>
+        var answerArray = [];
+        var pickWord = function() {
+            var words = ["minecraft", "glow squid", "axolotl", "goat", "amethyst", "elytra", "pig"];
+
+            var word = words[Math.floor(Math.random() * words.length)];
+            return word;
+        };
+
+        var setUpAnswerArray = function(word) {
+            for (var i = 0; i < word.length; i++) {
+                answerArray[i] = "_";
+            }
+
+        };
+
+        var showPlayerProgress = function(answerArray) {
+            alert(answerArray.join(" "));
+        };
+
+        var getGuess = function() {
+            var PlayerGuess = prompt("Guess a letter in the alphabet");
+            if (PlayerGuess === null) {} else if (PlayerGuess.length !== 1) {
+                alert("You can only guess a single letter")
+            } else {
+                PlayerGuess = PlayerGuess.toLowerCase();
+            }
+            return PlayerGuess;
+        };
+
+
+        var updateGameState = function(PlayerGuess, word, answerArray) {
+            remaining_letter = 0;
+            for (var a = 0; a < word.length; a++) {
+                if (PlayerGuess === word[a] && (answerArray[a] === "_")) {
+                    answerArray[a] = PlayerGuess;
+                    remaining_letter++;
+                }
+            }
+            return remaining_letter;
+        };
+
+
+        var showAnswerAndCongratulatePlayer = function(answerArray) {
+            alert("Congratulation on guessing the whole word correctly ! Press F5 to start the game again.");
+
+        };
+        var word = pickWord();
+        setUpAnswerArray(word);
+
+        var RemainingLetters = word.length;
+        var guesses = 20;
+
+        while (RemainingLetters > 0 || guesses > 0) {
+
+            showPlayerProgress(answerArray);
+
+            var PlayerGuess = getGuess();
+
+            guesses--;
+
+            var remainning_letter = updateGameState(PlayerGuess, word, answerArray);
+            RemainingLetters = RemainingLetters - remaining_letter;
+
+            if (guesses < 0) {
+                alert("Uh oh, you ran out of guesses! The answer was " + word + " " + "Press F5 to start the game again");
+                break;
+            }
+
+            if (RemainingLetters === 0) {
+                showAnswerAndCongratulatePlayer(answerArray);
+
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
