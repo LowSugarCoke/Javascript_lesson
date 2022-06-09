@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <h1>Hello world</h1>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+        //        var counter = 1;
+        //        var printMessage = function(){
+        //            console.log("You have been starting at your console for " + counter + " seconds");
+        //            counter++;
+        //        };
+        //        
+        //        var intervalId = setInterval(printMessage, 1000);
+        //        
+        //        clearInterval(intervalId);
+
+        var clickHandler = function(event) {
+
+            console.log("Click! " + event.pageX + " " + event.pageY);
+        };
+
+        $("html").click(clickHandler);
+
+    </script>
+
+
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+
+<body>
+   
+    <h1> Find Treasure! </h1>
+    <img id="map" src="https://nostarch.com/images/treasuremap.png" alt="">    
+    
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+    
+    // 1. 遊戲開始前，初始化寶藏
+    // 代表X and Y 最大的範圍
+    var getRandomNumber = function(size){
+        return Math.floor(Math.random() * size);
+    }
+    
+    var width = 400;
+    var height = 400;
+    
+    var target = {
+        x : getRandomNumber(width),
+        y : getRandomNumber(height)
+    }
+    
+    // 2. 遊戲開始畫
+    
+    var getDistance = function(event, target)
+    {
+      var diffx = event.offsetX - target.x;
+      var diffy = event.offsetY - target.y;
+      return Math.sqrt((diffx*diffx) + (diffy * diffy)); // 滑鼠點擊與寶藏的距離
+    }
+    
+    $("#map").click(function(event){
+        
+      var distance =  getDistance(event, target);   
+      console.log(distance);
+        
+        
+    });
+    
+    
+    </script>
+    
+    
+</body>
+</html>
