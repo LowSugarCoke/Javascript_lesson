@@ -1,122 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
    <head>
-    <meta charset="UTF-8">
-    <title>My first proper HTML page</title>
-    </head>
-
-
-<body> 
-	<!-- <h1>Hello World!</h1> -->
-	<!-- <p>My <em>first</em> <strong>web page</strong>.</p> -->
-	<!-- <p>Let's add another <strong><em>paragraph</em></strong>.</p> -->
-   <script>
-       
-       
-       
-       
-       
-//                  1. 先創造一個list，輸入四個單辭 ["Apple","Banana","Orange","Strayberry"]
-//                  2. 隨機挑選一個單詞
-//                  3. 創造一個空白的list，用來存放等一下要猜的單詞，形式可能是長這樣 [_ _ _ _ _ _ _]，長度就跟第二點的單詞一樣
-//                  
-//                  使用while，condition是在使用者還沒有猜到前會一直在while loop裡面
-//                  {
-//                      if 使用者選擇退出遊戲{
-//                          退出
-//                      }
-//                      else if 如果使用者輸入字母超過一個的話{
-//                         告訴使用者只能輸入一個字母
-//                      }
-//                      else{
-//                          就去比對挑選的單詞內是否有相同的字母                          
-//                      }     
-//                      console.log(現在猜到的情況);                    
-//                  }      
-       
-                    var words = ["javascript","monkey","amazing","pancake"];
-                    
-                    while(1){
-           
-                    var word = words[Math.floor(Math.random()*words.length)];
-                    var answerArray = [];
-                    for(var i=0;i<word.length;i++){
-                        answerArray[i] = "_";
-                    }
-                    
-                    alert(word);
-                    }
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-//      var words=["Javascript", "monkey", "amazing", "pancake"];
-//      
-//      // Pick a random word
-//      var word = words[Math.floor(Math.random()* words.length)];
-//
-//      // Set up the answer array
-//      var answerArray = [];
-//      for(var i = 0; i < word.length; ++i){
-//         answerArray[i] = "_ ";
-//      }
-//
-//      var remainingLetters = word.length;
-//
-//      // The game loop
-//      while (remainingLetters > 0 ){         
-//         // Get a guess from player
-//         var guess = prompt("Guess a letter, or click Cancel to stop playing.");
-//         if( guess === null){
-//            //Exit the game loop
-//            break;
-//         }else if(guess.length !==1){
-//            alert("Please enter a single letter.");
-//         }else{
-//            //Update the game state with the guess
-//            for(var j = 0; j < word.length; ++j){
-//               if(word[j] === guess && answerArray[j]==="_ "){
-//                  answerArray[j] = guess;
-//                   remainingLetters--;
-//               }
-//
-//            }
-//         }
-//
-//         // Show the player their progress
-//         alert(answerArray.join(""));
-//      }
-//
-//      // Show the answer the congratulate the player
-//      // alert(answerArray.join(""));
-//      alert("Good job! The answer was "+word);
-
-   </script>
-
-
-</body>
-
-
+      <meta charset="UTF-8">
+      <title>My first proper HTML page</title>
+   </head>
+   <body>
+      <!-- <h1>Hello World!</h1> -->
+      <!-- <p>My <em>first</em> <strong>web page</strong>.</p> -->
+      <!-- <p>Let's add another <strong><em>paragraph</em></strong>.</p> -->
+      <script>
+      
+      
+      
+      
+      
+      //                  1. 先創造一個list，輸入四個單辭 ["Apple","Banana","Orange","Strayberry"]
+      //                  2. 隨機挑選一個單詞
+      //                  3. 創造一個空白的list，用來存放等一下要猜的單詞，形式可能是長這樣 [_ _ _ _ _ _ _]，長度就跟第二點的單詞一樣
+      //
+      //                  使用while，condition是在使用者還沒有猜到前會一直在while loop裡面
+      //                  {
+      //                      if 使用者選擇退出遊戲{
+      //                          退出
+      //                      }
+      //                      else if 如果使用者輸入字母超過一個的話{
+      //                         告訴使用者只能輸入一個字母
+      //                      }
+      //                      else{
+      //                          就去比對挑選的單詞內是否有相同的字母
+      //                      }
+      //                      console.log(現在猜到的情況);
+      //                  }
+      
+      var words = ["javascript","monkey","amazing","pancake"];
+      
+      while(1){
+      
+      var word = words[Math.floor(Math.random()*words.length)];
+      var answerArray = [];
+      for(var i=0;i<word.length;i++){
+      answerArray[i] = "_";
+      }
+      
+      alert(word);
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //      var words=["Javascript", "monkey", "amazing", "pancake"];
+      //
+      //      // Pick a random word
+      //      var word = words[Math.floor(Math.random()* words.length)];
+      //
+      //      // Set up the answer array
+      //      var answerArray = [];
+      //      for(var i = 0; i < word.length; ++i){
+      //         answerArray[i] = "_ ";
+      //      }
+      //
+      //      var remainingLetters = word.length;
+      //
+      //      // The game loop
+      //      while (remainingLetters > 0 ){
+      //         // Get a guess from player
+      //         var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+      //         if( guess === null){
+      //            //Exit the game loop
+      //            break;
+      //         }else if(guess.length !==1){
+      //            alert("Please enter a single letter.");
+      //         }else{
+      //            //Update the game state with the guess
+      //            for(var j = 0; j < word.length; ++j){
+      //               if(word[j] === guess && answerArray[j]==="_ "){
+      //                  answerArray[j] = guess;
+      //                   remainingLetters--;
+      //               }
+      //
+      //            }
+      //         }
+      //
+      //         // Show the player their progress
+      //         alert(answerArray.join(""));
+      //      }
+      //
+      //      // Show the answer the congratulate the player
+      //      // alert(answerArray.join(""));
+      //      alert("Good job! The answer was "+word);
+      </script>
+   </body>
 </html>
